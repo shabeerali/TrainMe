@@ -10,8 +10,8 @@ And since the view model is not importing any of the UI elements, it maintains m
 # How is offline data stored and loaded?
 Storage: SwiftData with two models, CourseEntity and LessonEntity, linked by a cascade-delete relationship. All access goes through a @ModelActor, so database work is off the main thread and each operation is atomic.
 
-  b)  It tries the network first and syncs the result into the database: upsert in server order, delete courses the server no longer returns.
-  a)  If the request fails and courses were stored before, it shows the stored list with an “offline” banner. The network error only appears when nothing is stored, which is the first visit.
+  b) It tries the network first and syncs the result into the database: upsert in server order, delete courses the server no longer returns.
+  a) If the request fails and courses were stored before, it shows the stored list with an “offline” banner. The network error only appears when nothing is stored, which is the first visit.
 
 # Where would authentication tokens be stored in production?
 In the iOS Keychain, which is what the app already does. Not in UserDefaults, SwiftData or files, because those are readable in backups and on jailbroken devices.
