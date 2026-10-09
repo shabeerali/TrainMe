@@ -26,13 +26,13 @@ d)  Add crash reporting tools for reporting crashes and troubleshooting.
 The architecture carries over almost one-to-one:
 #iOS                                #Android
 ----                                ----------
-SwiftUI                 -- >         Jetpack Compose
-@Observable ViewModel   -- > 	       ViewModel exposing StateFlow<UiState> 
-async/await, actors	    -- >         Kotlin coroutines and Flow
-AppContainer	          -- >         Hilt modules for dependency injection
-NavigationStack	        -- >         Navigation Compose
-URLSession / mock API	  -- >         Retrofit + OkHttp with kotlinx.serialization
-SwiftData	              -- >         Room DB
+SwiftUI                 -- >         Jetpack Compose |
+@Observable ViewModel   -- > 	       ViewModel exposing StateFlow<UiState>  |
+async/await, actors	    -- >         Kotlin coroutines and Flow |
+AppContainer	          -- >         Hilt modules for dependency injection |
+NavigationStack	        -- >         Navigation Compose |
+URLSession / mock API	  -- >         Retrofit + OkHttp with kotlinx.serialization |
+SwiftData	              -- >         Room DB |
 Keychain	              -- >         Keystore-backed encryption
 
 
